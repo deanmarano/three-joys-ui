@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/three-joys-ui.css">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <script>
@@ -20,6 +22,9 @@
     <script src="assets/three-joys-ui.js"></script>
     <script>
       window.ThreeJoysUi = require('three-joys-ui/app')['default'].create({{APP_CONFIG}});
+      $(function() {
+        $("#title").fitText(.4);
+      });
     </script>
   </body>
 </html>
