@@ -1,0 +1,31 @@
+<h1>3 Joys</h1>
+
+{{#if signingInWithEmail}}
+  <button {{action 'showSignInWithEmail'}} class="btn btn-lg btn-primary">
+    Sign In with Facebook or Twitter
+  </button>
+  <form {{action "signInWithEmail" model on="submit"}}>
+    <label>Email
+      {{input type='email' value=model.email}}
+    </label>
+    <br>
+    <label>Password
+    {{input type='password' value=model.password}}
+    </label>
+    <br>
+    <input type="submit" class="btn btn-lg btn-default" value="Sign In">
+  </form>
+{{else}}
+  <button class="btn btn-lg btn-primary">
+    Sign In with Facebook
+  </button>
+  <br>
+
+  <button class="btn btn-lg btn-info">
+    Sign In with Twitter
+  </button>
+  <br>
+  <button {{action 'showSignInWithEmail'}} class="btn btn-lg btn-default">
+    Sign In with Email
+  </button>
+{{/if}}

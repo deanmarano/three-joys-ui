@@ -1,0 +1,11 @@
+<p> {{message}} </p>
+<form {{action "submit" on="submit"}}>
+  <ol>
+    {{#each joys as |joy|}}
+    <li>{{textarea value=joy.text rows=1}}PIC</li>
+    {{/each}}
+  </ol>
+  <a {{action 'addAnotherJoy'}}> + Add Joy</a>
+  <br>
+  <input type="submit" class="btn btn-primary" value="All Done!">
+</form>

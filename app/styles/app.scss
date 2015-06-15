@@ -1,25 +1,62 @@
 @import 'bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap';
+@import 'checkbox';
+
+$dark-blue: #011456;
+
 
 html, body {
-  font-size: 32px;
-  margin: 20px;
-  font-family: 'PT Sans Narrow', sans-serif;
-  color: white;
+  font-size: 18px;
+  margin: 10px;
+  font-family: 'Lato', sans-serif;
   text-align: center;
-  background-color: transparent;
+  background-color: $dark-blue;
+  color: white;
 }
 
-html {
-  background: url(http://www.mrwallpaper.com/wallpapers/Autumn-Forest-Leaves.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+ol {
+  text-align: left;
+}
+
+input, textarea {
+  color: $dark-blue;
 }
 
 #title {
-  font-family: 'Tangerine', cursive;
-  color: white;
   width: 100%;
-  text-shadow: 1px 0px 2px rgba(150, 150, 150, 1);
+  font-size: 80px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+em {
+  font-style: normal;
+}
+
+.logged-out.index {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  #title {
+    font-size: 50px;
+  }
+}
+
+.calendar {
+  width: 100%;
+}
+
+.calendar td {
+  height: 35px;
+  border-radius: 20px;
+}
+
+.calendar .done {
+  height: 35px;
+  background: lightgrey;
+  border-radius: 20px;
 }

@@ -6,11 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('sign-in');
-  this.route('sign-up');
-  this.route('signed-in', {path: '/app'}, function() {
-    this.route('today');
+  this.resource('home', {path: '/'}, function() {
+    this.resource('joys', {path: '/joys/:date'});
   });
+  this.resource('sign-in');
+  this.resource('sign-up');
 });
 
 export default Router;

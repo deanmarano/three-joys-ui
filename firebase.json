@@ -1,0 +1,8 @@
+{
+  "firebase": "threejoys",
+  "public": "dist",
+  "rewrites": [{
+    "source": "**",
+    "destination": "/index.html"
+  }]
+}

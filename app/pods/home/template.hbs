@@ -1,0 +1,12 @@
+{{#if model.signedIn}}
+  {{outlet}}
+{{else}}
+<div class="logged-out index">
+  <p>
+    A daily reminder to be thankful for your life.
+  </p>
+  {{#link-to 'sign-in' class="btn btn-success btn-lg" tagName="button"}}Log In{{/link-to}}
+  or
+  {{#link-to 'sign-up' class="btn btn-default btn-lg" tagName="button"}}Sign Up{{/link-to}}
+</div>
+{{/if}}
