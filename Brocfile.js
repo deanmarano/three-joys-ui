@@ -6,7 +6,12 @@ var app = new EmberApp();
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
-//
+
+[
+  'moment/moment.js',
+  'lodash/lodash.js'
+].forEach(function(dep) { app.import('bower_components/' + dep); });
+
 // If you need to use different assets in different
 // environments, specify an object as the first parameter. That
 // object's keys should be the environment name and the values

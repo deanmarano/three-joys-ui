@@ -1,9 +1,9 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
-  var appName = 'three-joys-ui';
   var ENV = {
-    modulePrefix: appName,
+    modulePrefix: 'three-joys-ui',
+    podModulePrefix: 'three-joys-ui/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

@@ -1,0 +1,9 @@
+<table class="calendar">
+  {{#each splitInWeeks as |week|}}
+  <tr>
+    {{#each week as |day|}}
+      {{link-to day.display 'joys' day.link tagName="td"}}
+    {{/each}}
+  </tr>
+  {{/each}}
+</table>
