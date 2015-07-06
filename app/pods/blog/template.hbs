@@ -1,0 +1,7 @@
+{{#each model as |post|}}
+{{#link-to 'blog.post' post.id}}
+  {{post.name}}
+{{/link-to}}
+{{/each}}
+
+{{outlet}}

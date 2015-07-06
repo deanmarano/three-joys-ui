@@ -9,7 +9,8 @@ var app = new EmberApp();
 
 [
   'moment/moment.js',
-  'lodash/lodash.js'
+  'lodash/lodash.js',
+  'marked/lib/marked.js'
 ].forEach(function(dep) { app.import('bower_components/' + dep); });
 
 // If you need to use different assets in different

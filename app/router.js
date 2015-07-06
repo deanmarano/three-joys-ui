@@ -11,6 +11,9 @@ Router.map(function() {
   });
   this.resource('sign-in');
   this.resource('sign-up');
+  this.resource('blog', function() {
+    this.route('post', {path: ':postId'});
+  });
 });
 
 export default Router;
