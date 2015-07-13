@@ -1,0 +1,7 @@
+{{#if completed}}
+  <a {{action 'focusIn'}}>
+    {{joy.text}}
+  </a>
+{{else}}
+  {{textarea value=joy.text rows=rows focus-in="focusIn" focus-out="focusOut"}}PIC
+{{/if}}

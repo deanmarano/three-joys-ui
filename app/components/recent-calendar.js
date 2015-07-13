@@ -9,16 +9,19 @@ export default Ember.Component.extend({
       return this.get('beforeDate').clone().day(0).day(-21);
     }
   }),
-  previousWeeks: Ember.computed('startDay', 'beforeDate', function() {
-    var beforeDate = this.get('beforeDate');
+  previousWeeks: Ember.computed('startDay', 'beforeDate', 'highlightedDays', function() {
+    var beforeDate = this.get('beforeDate'),
+        highlight  = this.get('highlightedDays');
     return _.range(28).map((i) => {
       return this.get('startDay').clone().add(i, 'days');
     }).filter((d) => {
       return beforeDate.diff(d, 'days') > 0;
     }).map((d) => {
+      var formatted = d.format('YYYY-MM-DD');
       return {
+        done: _.includes(highlight, formatted),
         display: d.format('D'),
-        link: d.format('YYYY-MM-DD')
+        link: formatted
       };
     });
   }),

@@ -11,8 +11,8 @@ export default Ember.Controller.extend({
   dayOfWeek: Ember.computed(function() {
     return moment().format('dddd');
   }),
-  lastDay: Ember.computed('model.date', function() {
-    var lastDay = moment(this.get('model.date'));
+  lastDay: Ember.computed('model.previousDay.date', function() {
+    var lastDay = moment(this.get('model.previousDay.date'));
     var daysAgo = moment().diff(lastDay, 'days');
     if(daysAgo === 0) {
       return "Today";

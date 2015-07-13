@@ -1,17 +1,21 @@
-<h2>Welcome back.</h2>
+<nav class="header">
+  <a {{action 'back'}}class="btn btn-default pull-left">Back</a>
+  {{#link-to 'home'}}3 Joys{{/link-to}}
+  {{#link-to 'settings' class="btn pull-right"}}Settings{{/link-to}}
+</nav>
 
-{{#link-to 'joys' todayLink class="btn btn-primary"}}
-  Log Today, {{dayOfWeek}}
-{{/link-to}}
+<div class="main">
+  <h2>Welcome back.</h2>
 
-<br>
+  {{#link-to 'joys' todayLink class="btn btn-primary"}}Log Today{{/link-to}}
 
-<h3>{{lastDay}}</h3>
-<ol>
-  {{#each model.joys as |joy|}}
-  <li>{{joy}}</li>
-  {{/each}}
-</ol>
+  <h3>{{lastDay}}</h3>
+  <ol>
+    {{#each model.previousDay.joys as |joy|}}
+    <li>{{joy}}</li>
+    {{/each}}
+  </ol>
 
-<h3>Last Few Weeks</h3>
-{{recent-calendar beforeDate=today}}
+  <h3>Last Few Weeks</h3>
+  {{recent-calendar beforeDate=today highlightedDays=model.completedDates}}
+</div>

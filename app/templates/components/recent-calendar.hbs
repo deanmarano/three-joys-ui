@@ -2,7 +2,13 @@
   {{#each splitInWeeks as |week|}}
   <tr>
     {{#each week as |day|}}
-      {{link-to day.display 'joys' day.link tagName="td"}}
+    <td>
+      {{#if day.done}}
+        {{link-to day.display 'joys' day.link class="done"}}
+      {{else}}
+        {{day.display}}
+      {{/if}}
+    </td>
     {{/each}}
   </tr>
   {{/each}}

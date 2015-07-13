@@ -1,11 +1,18 @@
-<p> {{message}} </p>
-<form {{action "submit" on="submit"}}>
-  <ol>
-    {{#each joys as |joy|}}
-    <li>{{textarea value=joy.text rows=1}}PIC</li>
-    {{/each}}
-  </ol>
-  <a {{action 'addAnotherJoy'}}> + Add Joy</a>
-  <br>
-  <input type="submit" class="btn btn-primary" value="All Done!">
-</form>
+<nav class="header">
+  <a {{action 'back'}}class="btn btn-default pull-left">Back</a>
+  {{#link-to 'home'}}3 Joys{{/link-to}}
+  <a {{action 'handleAction'}}class="btn btn-primary pull-right">Save</a>
+</nav>
+<div class="main">
+  <p> {{message}} </p>
+  <form {{action "submit" on="submit"}}>
+    <ol>
+      {{#each joys as |joy|}}
+      <li>
+        {{joy-input joy=joy}}
+      </li>
+      {{/each}}
+    </ol>
+    <a {{action 'addAnotherJoy'}}> + Add Joy</a>
+  </form>
+</div>

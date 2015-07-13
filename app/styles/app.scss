@@ -5,12 +5,24 @@ $dark-blue: #011456;
 
 
 html, body {
+  height: 100%;
   font-size: 18px;
-  margin: 10px;
   font-family: 'Lato', sans-serif;
   text-align: center;
   background-color: $dark-blue;
   color: white;
+}
+
+.main {
+  padding: 50px 10px 10px 10px;
+}
+
+nav.header {
+  background: lightgrey;
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  position: fixed;
 }
 
 ol {
